@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+</head>
+
+<body>
+
+<h1>Upload Photo</h1>
+
+<form method="POST" action="/upload" enctype="multipart/form-data">
+    <label for="email">Enter your email: </label><br/>
+    <input type="email" name="email" id="email"/><br/><br/>
+
+    <label for="file">Upload Your Picture: </label><br/>
+    <input type="file" name="file" id="file" /><br/><br/>
+
+    <hr>
+
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

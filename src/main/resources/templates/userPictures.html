@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Show picture of user ID: ' + ${userId}" />
+</head>
+
+<body>
+
+<h1 th:text="'List of Pictures with email: ' + ${email}" />
+
+<div th:each="pic : ${pictures}">
+<!--    <img th:src="@{src/main/resources/static/imgs/${pic}}" alt="A pictures uploaded by user">-->
+    <img src="../static/imgs/Screenshot_20211130-190638_Pagii.jpg" alt="A pictures uploaded by user" th:src="@{imgs/Screenshot_20211130-190638_Pagii.jpg}">
+    <!--    <p th:text="${pic}"/>-->
+</div>
+
+</body>
+</html>

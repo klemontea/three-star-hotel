@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Three Star Hotel - Login</title>
+</head>
+
+<body>
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="#"><b>Admin</b> SCS</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Welcome</p>
+                    <div class="alert alert-danger"></div>
+                    <div class="alert alert-danger"></div>
+                    <div class="alert alert-success"></div>
+
+                <form action="${pageContext.request.contextPath}/login" method="post" autocomplete="off">
+                    <div class="input-group mb-3">
+                        <input type="email" name="username" class="form-control" value="" placeholder="Email" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" name="password" value="" class="form-control" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <div class="row">
+
+                        <!-- /.col -->
+                        <div class="col-xs-4">
+                            <button type="submit" class="btn btn-primary btn-block btn-flat">
+                                Sign In
+                            </button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+
+    <!-- jQuery 2.2.3 -->
+    <script th:src="@{/assets/node_modules/bootstrap/dist/js/jquery.min.js}"
+            src="../static/assets/node_modules/bootstrap/dist/js/jquery.min.js">
+    </script>
+    <!-- Bootstrap 3.3.6 -->
+    <script th:src="@{/assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js}"
+            src="../static/assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>
